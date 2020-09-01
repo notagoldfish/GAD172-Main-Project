@@ -6,6 +6,7 @@ public class PlantGrowth : MonoBehaviour
 {
 
     bool fed = false;
+    public float reqWaterLevel = 5f;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class PlantGrowth : MonoBehaviour
         WateredTarget targetScript = this.transform.parent.gameObject.GetComponent<WateredTarget>();
         if (targetScript != null)
         {
-            if ((targetScript.waterLev >= 5) && (fed == false))
+            if ((targetScript.waterLev >= reqWaterLevel) && (fed == false))
             {
                 Debug.Log("This " + this.transform.parent.gameObject + "has a water level of 5 or more :)");
                 targetScript.waterLev -= 5;

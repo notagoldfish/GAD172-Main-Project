@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public float jumpHeight = 3f;
 
     public Transform groundCheck;
-    public float groundDistance = 0.4f;
+    public float groundDistance = 1f;
     public LayerMask groundMask;
 
     Vector3 velocity;
@@ -31,9 +31,9 @@ public class PlayerController : MonoBehaviour
     public bool receivedJumpBoost = false;
 
     //Equipment
-    bool holdWaterGun = false;
+    public bool holdWaterGun = false;
     public bool hasWaterGun = false;
-    bool holdSeedGun = false;
+    public bool holdSeedGun = false;
     public bool hasSeedGun = false;
     public GameObject waterGun;
     public GameObject seedGun;
